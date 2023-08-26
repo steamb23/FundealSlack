@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundealSlack", "FundealSlack\FundealSlack.csproj", "{AC1D5586-3BE8-42D9-8FB7-BC9E3452C03E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundealSlackTest", "FundealSlackTest\FundealSlackTest.csproj", "{98974943-0A25-4210-AD50-A9957F1A9F63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC1D5586-3BE8-42D9-8FB7-BC9E3452C03E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC1D5586-3BE8-42D9-8FB7-BC9E3452C03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC1D5586-3BE8-42D9-8FB7-BC9E3452C03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC1D5586-3BE8-42D9-8FB7-BC9E3452C03E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98974943-0A25-4210-AD50-A9957F1A9F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98974943-0A25-4210-AD50-A9957F1A9F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98974943-0A25-4210-AD50-A9957F1A9F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98974943-0A25-4210-AD50-A9957F1A9F63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
