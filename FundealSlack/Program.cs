@@ -30,7 +30,7 @@ builder.Services.AddTransient(async (services) =>
 {
     var loginResponse = await slackClient.ConnectAsync();
     if (!loginResponse.ok)
-        throw new SlackConnectionException();
+        throw new SlackConnectionException(loginResponse.error);
     return slackClient;
 });
 
@@ -49,9 +49,10 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-if (!(await loginResponseAsync).ok)
+var loginResponse = await loginResponseAsync;
+if (!loginResponse.ok)
 {
-    throw new SlackConnectionException();
+    throw new SlackConnectionException(loginResponse.error);
 }
 
 app.Run();
