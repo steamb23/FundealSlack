@@ -14,7 +14,7 @@ if (slackApiToken is not { Length: > 0 })
 }
 
 var slackClient = new SlackTaskClient(slackApiToken);
-var loginResponseAsync = slackClient.ConnectAsync();
+var testAuthAsync = slackClient.TestAuthAsync();
 
 // Add services to the container.
 
@@ -28,9 +28,9 @@ builder.Services.AddSwaggerGen(options =>
 });
 builder.Services.AddTransient(async (services) =>
 {
-    var loginResponse = await slackClient.ConnectAsync();
-    if (!loginResponse.ok)
-        throw new SlackConnectionException(loginResponse.error);
+    var testAuth = await slackClient.TestAuthAsync();
+    if (!testAuth.ok)
+        throw new SlackConnectionException(testAuth.error);
     return slackClient;
 });
 
@@ -49,10 +49,10 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-var loginResponse = await loginResponseAsync;
-if (!loginResponse.ok)
+var testAuth = await testAuthAsync;
+if (!testAuth.ok)
 {
-    throw new SlackConnectionException(loginResponse.error);
+    throw new SlackConnectionException(testAuth.error);
 }
 
 app.Run();
