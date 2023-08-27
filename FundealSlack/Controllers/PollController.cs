@@ -6,6 +6,7 @@ using SlackAPI;
 namespace FundealSlack.Controllers;
 
 [ApiController]
+[Route("poll")]
 public class PollController : Controller
 {
     private ILogger<PollController> Logger { get; }
